@@ -127,13 +127,5 @@ function addXO_9(){
 window.addEventListener("DOMContentLoaded",function(){
     board_layout();
     activClick();
-    addXO_1;
-    addXO_2;
-    addXO_3;
-    addXO_4;
-    addXO_5;
-    addXO_6;
-    addXO_7;
-    addXO_8;
-    addXO_9;
+
 })
