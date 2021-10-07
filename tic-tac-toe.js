@@ -1,3 +1,7 @@
+//Name:Ronae Johnson 
+//Date:5/10/2021
+
+// board_layout function uses a for loop to append the square class to each div under id board.
 function board_layout(){
     var outDiv = document.getElementById("board");
     var inDiv = outDiv.getElementsByTagName("div");
@@ -167,10 +171,12 @@ function addXO_9(){
         button[8].innerHTML = "O";
         turn = 1;
         track[8]= "O";
+        console.log(track);
     }
 }
 
 
+// The hoveroff functions set listners of each to div to detect when the mouse is one the squares.
 function hoveron(){
     var outDiv = document.getElementById("board");
     var buttonHover = outDiv.getElementsByTagName("div");
@@ -186,6 +192,7 @@ function hoveron(){
 }
 
 
+// the hoverout functions are activated by the hoveroff listeners to add the hover stlye to the squares.
 function hoverover_0() {
     var outDiv = document.getElementById("board");
     var buttonHover = outDiv.getElementsByTagName("div");
@@ -239,7 +246,10 @@ function hoverover_8() {
     var buttonHover = outDiv.getElementsByTagName("div");
     buttonHover[8].classList.add("hover");
 }
+//.....................................hoverover functions ends.......................//
 
+
+// The hoveroff functions set listners of each to div to detect when the mouse is away from the square.
 function hoveroff(){
     var outDiv = document.getElementById("board");
     var buttonHover = outDiv.getElementsByTagName("div");
@@ -253,7 +263,7 @@ function hoveroff(){
     buttonHover[7].addEventListener("mouseout", hoverout_7);
     buttonHover[8].addEventListener("mouseout", hoverout_8);
 }
-
+// the hoverout functions are activated by the hoveroff listeners to remove the hover stlye from the squares.
 function hoverout_0() {
     var outDiv = document.getElementById("board");
     var buttonHover = outDiv.getElementsByTagName("div");
@@ -307,10 +317,37 @@ function hoverout_8() {
     var buttonHover = outDiv.getElementsByTagName("div");
     buttonHover[8].classList.remove("hover");
 }
+//........................hoverout functions ends.........................//
 
-    window.addEventListener("DOMContentLoaded",function(){
+
+//the restart function applies a lister to the button element.
+function restart(){
+    var resetbtn = document.querySelector("button");
+    resetbtn.addEventListener("click", refresh);
+}
+//......................restart function ends ...........................///
+
+//The resfresh function sets the text in each div as null.
+function refresh(){
+    var outDiv = document.getElementById("board");
+    var button = outDiv.getElementsByTagName("div");
+    button[0].innerHTML = "";
+    button[1].innerHTML = "";
+    button[2].innerHTML = "";
+    button[3].innerHTML = "";
+    button[4].innerHTML = "";
+    button[5].innerHTML = "";
+    button[6].innerHTML = "";
+    button[7].innerHTML = "";
+    button[8].innerHTML = "";
+}
+//....................refresh function ends..............................//
+
+window.addEventListener("DOMContentLoaded",function(){
     board_layout();
     activClick();
     hoveron();
     hoveroff();
+    restart();
+    refresh();
 })
