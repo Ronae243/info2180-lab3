@@ -26,7 +26,10 @@ function activClick(){
     button[8].addEventListener("click", addXO_9);
 }
 
-var track = ["","","","","","","","",""];
+
+var row1 = ["","",""];
+var row2 = ["","",""];
+var row3 = ["","",""];
 var turn = 1;
 function addXO_1(){
     
@@ -34,13 +37,15 @@ function addXO_1(){
     var button = outDiv.getElementsByTagName("div");
     if (turn == 1){
         button[0].innerHTML = "X";
+        button[0].classList.add("X");
         turn = 0;
-        track[0] = "X";
+        row1[0] = "X";
     }
     else{
         button[0].innerHTML = "O";
+        button[0].classList.add("O");
         turn = 1;
-        track[0]= "O";
+        row1[0]= "O";
     }
 }
 
@@ -50,13 +55,15 @@ function addXO_2(){
     var button = outDiv.getElementsByTagName("div");
     if (turn == 1){
         button[1].innerHTML = "X";
+        button[1].classList.add("X");
         turn = 0;
-        track[1] = "X";
+        row1[1] = "X";
     }
     else{
         button[1].innerHTML = "O";
+        button[1].classList.add("O");
         turn = 1;
-        track[1]= "O";
+        row1[1]= "O";
     }
 }
 
@@ -66,14 +73,15 @@ function addXO_3(){
     var button = outDiv.getElementsByTagName("div");
     if (turn == 1){
         button[2].innerHTML = "X";
+        button[2].classList.add("X");
         turn = 0;
-        track[2] = "X";
-        
+        row1[2] = "X";
     }
     else{
         button[2].innerHTML = "O";
+        button[2].classList.add("O");
         turn = 1;
-        track[2]= "O";
+        row1[2]= "O";
     }
 
 }
@@ -84,13 +92,15 @@ function addXO_4(){
     var button = outDiv.getElementsByTagName("div");
     if (turn == 1){
         button[3].innerHTML = "X";
+        button[3].classList.add("X");
         turn = 0;
-        track[3] = "X";
+        row2[0] = "X";
     }
     else{
         button[3].innerHTML = "O";
+        button[3].classList.add("O");
         turn = 1;
-        track[3]= "O";
+        row2[0]= "O";
     }
 }
 
@@ -100,13 +110,15 @@ function addXO_5(){
     var button = outDiv.getElementsByTagName("div");
     if (turn == 1){
         button[4].innerHTML = "X";
+        button[4].classList.add("X");
         turn = 0;
-        track[4] = "X";
+        row2[1] = "X";
     }
     else{
         button[4].innerHTML = "O";
+        button[4].classList.add("O");
         turn = 1;
-        track[4]= "O";
+        row2[1]= "O";
     }
 }
 
@@ -116,13 +128,15 @@ function addXO_6(){
     var button = outDiv.getElementsByTagName("div");
     if (turn == 1){
         button[5].innerHTML = "X";
+        button[5].classList.add("X");
         turn = 0;
-        track[5] = "X";
+        row2[2] = "X";
     }
     else{
         button[5].innerHTML = "O";
+        button[5].classList.add("O");
         turn = 1;
-        track[5]= "O";
+        row2[2]= "O";
     }
 }
 
@@ -132,13 +146,15 @@ function addXO_7(){
     var button = outDiv.getElementsByTagName("div");
     if (turn == 1){
         button[6].innerHTML = "X";
+        button[6].classList.add("X");
         turn = 0;
-        track[6] = "X"; 
+        row3[0] = "X"; 
     }
     else{
         button[6].innerHTML = "O";
+        button[6].classList.add("O");
         turn = 1;
-        track[6]= "O";
+        row3[0]= "O";
     }
 }
 
@@ -148,13 +164,15 @@ function addXO_8(){
     var button = outDiv.getElementsByTagName("div");
     if (turn == 1){
         button[7].innerHTML = "X";
+        button[7].classList.add("X");
         turn = 0;
-        track[7] = "X";
+        row3[1] = "X";
     }
     else{
         button[7].innerHTML = "O";
+        button[7].classList.add("O");
         turn = 1;
-        track[7]= "O";  
+        row3[1]= "O";  
     }
 }
 
@@ -164,14 +182,15 @@ function addXO_9(){
     var button = outDiv.getElementsByTagName("div");
     if (turn == 1){
         button[8].innerHTML = "X";
+        button[8].classList.add("X");
         turn = 0;
-        track[8] = "X";
+        row3[2] = "X";
     }
     else{
         button[8].innerHTML = "O";
+        button[8].classList.add("O");
         turn = 1;
-        track[8]= "O";
-        console.log(track);
+        row3[2]= "O";
     }
 }
 
@@ -343,6 +362,8 @@ function refresh(){
 }
 //....................refresh function ends..............................//
 
+
+
 window.addEventListener("DOMContentLoaded",function(){
     board_layout();
     activClick();
@@ -350,4 +371,5 @@ window.addEventListener("DOMContentLoaded",function(){
     hoveroff();
     restart();
     refresh();
+    
 })
