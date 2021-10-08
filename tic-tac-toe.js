@@ -6,9 +6,9 @@ function board_layout(){
     var outDiv = document.getElementById("board");
     var inDiv = outDiv.getElementsByTagName("div");
     for (var int = 0; int < inDiv.length; int++){
-        var clasDiv = inDiv[int].className = "square";
+    inDiv[int].className = "square";
     }
-    return (clasDiv);
+
 }
 
 
@@ -27,9 +27,9 @@ function activClick(){
 }
 
 
-var row1 = ["","",""];
-var row2 = ["","",""];
-var row3 = ["","",""];
+row1 =[];
+row2 =[];
+row3 =[];
 var turn = 1;
 function addXO_1(){
     
@@ -38,14 +38,17 @@ function addXO_1(){
     if (turn == 1){
         button[0].innerHTML = "X";
         button[0].classList.add("X");
+        button[0].style.pointerEvents = 'none';
         turn = 0;
-        row1[0] = "X";
+        row1[0] = 1;
+        console.log(turn);      
     }
     else{
         button[0].innerHTML = "O";
         button[0].classList.add("O");
+        button[0].style.pointerEvents = 'none';
         turn = 1;
-        row1[0]= "O";
+        row1[0]= 0;
     }
 }
 
@@ -56,14 +59,17 @@ function addXO_2(){
     if (turn == 1){
         button[1].innerHTML = "X";
         button[1].classList.add("X");
+        button[1].style.pointerEvents = 'none';
         turn = 0;
-        row1[1] = "X";
+        row1[1] = 1;
+        
     }
     else{
         button[1].innerHTML = "O";
         button[1].classList.add("O");
+        button[1].style.pointerEvents = 'none';
         turn = 1;
-        row1[1]= "O";
+        row1[1]= 0;
     }
 }
 
@@ -74,16 +80,19 @@ function addXO_3(){
     if (turn == 1){
         button[2].innerHTML = "X";
         button[2].classList.add("X");
+        button[2].style.pointerEvents = 'none';
         turn = 0;
-        row1[2] = "X";
+        row1[2] = 1;
+        
     }
     else{
         button[2].innerHTML = "O";
         button[2].classList.add("O");
+        button[2].style.pointerEvents = 'none';
         turn = 1;
-        row1[2]= "O";
+        row1[2] = 0;
+       
     }
-
 }
 
 function addXO_4(){
@@ -93,14 +102,16 @@ function addXO_4(){
     if (turn == 1){
         button[3].innerHTML = "X";
         button[3].classList.add("X");
+        button[3].style.pointerEvents = 'none';
         turn = 0;
-        row2[0] = "X";
+        row2[0] = 1;
     }
     else{
         button[3].innerHTML = "O";
         button[3].classList.add("O");
+        button[3].style.pointerEvents = 'none';
         turn = 1;
-        row2[0]= "O";
+        row2[0]= 0;
     }
 }
 
@@ -111,14 +122,16 @@ function addXO_5(){
     if (turn == 1){
         button[4].innerHTML = "X";
         button[4].classList.add("X");
+        button[4].style.pointerEvents = 'none';
         turn = 0;
-        row2[1] = "X";
+        row2[1] = 1;
     }
     else{
         button[4].innerHTML = "O";
         button[4].classList.add("O");
+        button[4].style.pointerEvents = 'none';
         turn = 1;
-        row2[1]= "O";
+        row2[1]= 0;
     }
 }
 
@@ -129,14 +142,16 @@ function addXO_6(){
     if (turn == 1){
         button[5].innerHTML = "X";
         button[5].classList.add("X");
+        button[5].style.pointerEvents = 'none';
         turn = 0;
-        row2[2] = "X";
+        row2[2] = 1;
     }
     else{
         button[5].innerHTML = "O";
         button[5].classList.add("O");
+        button[5].style.pointerEvents = 'none';
         turn = 1;
-        row2[2]= "O";
+        row2[2]= 0;
     }
 }
 
@@ -147,14 +162,16 @@ function addXO_7(){
     if (turn == 1){
         button[6].innerHTML = "X";
         button[6].classList.add("X");
+        button[6].style.pointerEvents = 'none';
         turn = 0;
-        row3[0] = "X"; 
+        row3[0] = 1; 
     }
     else{
         button[6].innerHTML = "O";
         button[6].classList.add("O");
+        button[6].style.pointerEvents = 'none';
         turn = 1;
-        row3[0]= "O";
+        row3[0]= 0;
     }
 }
 
@@ -165,14 +182,16 @@ function addXO_8(){
     if (turn == 1){
         button[7].innerHTML = "X";
         button[7].classList.add("X");
+        button[7].style.pointerEvents = 'none';
         turn = 0;
-        row3[1] = "X";
+        row3[1] = 1;
     }
     else{
         button[7].innerHTML = "O";
         button[7].classList.add("O");
+        button[7].style.pointerEvents = 'none';
         turn = 1;
-        row3[1]= "O";  
+        row3[1]= 0;  
     }
 }
 
@@ -183,14 +202,16 @@ function addXO_9(){
     if (turn == 1){
         button[8].innerHTML = "X";
         button[8].classList.add("X");
+        button[8].style.pointerEvents = 'none';
         turn = 0;
-        row3[2] = "X";
+        row3[2] = 1;
     }
     else{
         button[8].innerHTML = "O";
         button[8].classList.add("O");
+        button[8].style.pointerEvents = 'none';
         turn = 1;
-        row3[2]= "O";
+        row3[2]= 0;
     }
 }
 
@@ -336,7 +357,7 @@ function hoverout_8() {
     var buttonHover = outDiv.getElementsByTagName("div");
     buttonHover[8].classList.remove("hover");
 }
-//........................hoverout functions ends.........................//
+//........................hoverout functions ends........................//
 
 
 //the restart function applies a lister to the button element.
@@ -344,32 +365,19 @@ function restart(){
     var resetbtn = document.querySelector("button");
     resetbtn.addEventListener("click", refresh);
 }
-//......................restart function ends ...........................///
+//......................restart function ends ...........................//
 
 //The resfresh function sets the text in each div as null.
 function refresh(){
-    var outDiv = document.getElementById("board");
-    var button = outDiv.getElementsByTagName("div");
-    button[0].innerHTML = "";
-    button[1].innerHTML = "";
-    button[2].innerHTML = "";
-    button[3].innerHTML = "";
-    button[4].innerHTML = "";
-    button[5].innerHTML = "";
-    button[6].innerHTML = "";
-    button[7].innerHTML = "";
-    button[8].innerHTML = "";
+    location.reload();
 }
 //....................refresh function ends..............................//
-
-
+ 
 
 window.addEventListener("DOMContentLoaded",function(){
     board_layout();
     activClick();
     hoveron();
     hoveroff();
-    restart();
-    refresh();
-    
+    restart();  
 })
