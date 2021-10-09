@@ -166,6 +166,15 @@ function test(){
         status.classList.add("you-won");
         for( const btn of button){btn.style.pointerEvents = 'none';}   
     }
+    else if ((button[0].innerHTML == "O" || button[0].innerHTML == "X") && (button[1].innerHTML == "O" || button[1].innerHTML == "X") 
+        && (button[2].innerHTML == "O" || button[2].innerHTML == "X" ) && (button[3].innerHTML == "O" || button[3].innerHTML == "X" ) 
+        && (button[4].innerHTML == "O" || button[4].innerHTML == "X" ) && (button[5].innerHTML == "O" || button[5].innerHTML == "X" )
+        && (button[6].innerHTML == "O" || button[6].innerHTML == "X" ) && (button[7].innerHTML == "O" || button[7].innerHTML == "X" )
+        && (button[8].innerHTML == "O" || button[8].innerHTML == "X" )){ 
+        status.innerHTML = "We have a tie!";
+        status.classList.add("you-won");
+        for( const btn of button){btn.style.pointerEvents = 'none';}   
+    }
   
 }
 
