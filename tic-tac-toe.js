@@ -1,6 +1,4 @@
 //Name:Ronae Johnson 
-
-
 var turn = 1;
 // board_layout function uses a for loop to append the square class to each div under id board.
 function board_layout(){
